@@ -8,13 +8,29 @@ on:
     branches:
       - main
 
+env:
+  DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+  KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
+
 jobs:
     rsync-the-changes:
         runs-on: ubuntu-latest
         steps:
           - name: cloning the repo
             uses: actions/checkout@v1
-          - name: checking the current dir
+          - name: building
             run: |
-              pwd
-              ls
+              make prepare
+              make build
+          - name: Authenticating
+            run: |
+              mkdir -p ~/.ssh
+              echo "${KNOWN_HOSTS}" >> ~/.ssh/known_hosts
+              echo "${DEPLOY_KEY}" > ~/.ssh/my_rsync_key
+              echo "IdentityFile ~/.ssh/my_rsync_key" >> ~/.ssh/config
+              chmod -R 700 ~/.ssh
+          - name: Deploy
+            run: |
+              rsync -avz -e 'ssh -p 22' --delete ${GITHUB_WORKSPACE}/ nitesh@20.197.1.204:~/devdocs/
+            
+              
