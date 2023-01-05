@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    rsync-the-changes:
+        runs-on: ubuntu-latest
+        steps:
+          - name: cloning the repo
+            uses: actions/checkout@v1
+          - name: checking the current dir
+            run: |
+              pwd
+              ls
