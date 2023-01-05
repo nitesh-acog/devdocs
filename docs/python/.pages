@@ -1,0 +1,9 @@
+arrange:
+    - index.md
+    - tools
+    - python-best-practices
+    - databases
+    - web
+    - jupyter-notebook
+    - visualization
+    - performance
