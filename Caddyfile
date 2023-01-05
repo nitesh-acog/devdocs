@@ -1,0 +1,5 @@
+dev.mlgen.me {
+ # node-app:4000 is the docker container running the Node.js application
+ # in our case it's exposed on port 4000
+ reverse_proxy localhost:8000
+}
