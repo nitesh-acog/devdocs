@@ -32,7 +32,7 @@ jobs:
           - name: Deploy
             run: |
               ls -altr
-              rsync -avz -e 'ssh -p 22' --delete ${GITHUB_WORKSPACE}/site/ nitesh@20.197.1.204:~/devdocs/site
-              rsync -avz -e 'ssh -p 22' --delete ${GITHUB_WORKSPACE}/docs/ nitesh@20.197.1.204:~/devdocs/docs
+              rsync -avz -e 'ssh -p 22' --delete site/ nitesh@20.197.1.204:~/devdocs/site
+           #rsync -avz -e 'ssh -p 22' --delete ${GITHUB_WORKSPACE}/docs/ nitesh@20.197.1.204:~/devdocs/docs
             
               
