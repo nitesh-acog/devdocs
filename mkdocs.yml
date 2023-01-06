@@ -1,5 +1,5 @@
 site_name: Developer Documentation
-repo_url: https://github.com/aganitha/devdocs/
+repo_url: https://github.com/nitesh-acog/devdocs
 edit_uri: edit/main/docs/
 theme:
   font:
