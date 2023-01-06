@@ -1,10 +1,10 @@
-# Developer documentation
+# nitesh documentation
 
 In this site, we have the following developer documentation:
 
 | Topic     | Description                          |
 | :---------- | :----------------------------------- |
-|  [python] test just with the site dir changes more| Python exercises and best practices  |
+|  [python]| Python exercises and best practices  |
 | [nodejs](node)   | Node exercises and local practices |
 | [devops](DevOps)   | Developer Docuemntation |
 | [cloud](CloudOps)|Local and cloud documentation|
