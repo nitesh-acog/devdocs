@@ -11,6 +11,8 @@ on:
 env:
   DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
   KNOWN_HOSTS: ${{ secrets.KNOWN_HOSTS }}
+  USER: ${{ secrets.USER}}
+  DNS: ${{secrets.DNS}}
 
 jobs:
     rsync-the-changes:
@@ -32,7 +34,7 @@ jobs:
           - name: Deploy
             run: |
               cat site/index.html
-              rsync -avz -e 'ssh -p 22' --delete site/ nitesh@20.197.1.204:~/devdocs/site
+              rsync -avz -e 'ssh -p 22' --delete site/ "${USER}"@"${DNS}":~/devdocs/site
           #rsync -avz -e 'ssh -p 22' --delete docs/ nitesh@20.197.1.204:~/devdocs/docs
             
               
