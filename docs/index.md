@@ -4,7 +4,7 @@ In this site, we have the following developer documentation:
 
 | Topic     | Description                          |
 | :---------- | :----------------------------------- |
-|  [pythonniteshhgh123](python)(Nitesh kumar 44 build)| Python exercises and best practices  |
+|  [python](python)| Python exercises and best practices  |
 | [nodejs](node)   | Node exercises and local practices |
 | [devops](DevOps)   | Developer Docuemntation |
 | [cloud](CloudOps)|Local and cloud documentation|
