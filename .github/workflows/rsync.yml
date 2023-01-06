@@ -31,6 +31,6 @@ jobs:
               chmod -R 700 ~/.ssh
           - name: Deploy
             run: |
-              rsync -avz -e 'ssh -p 22' --delete ${GITHUB_WORKSPACE}/ nitesh@20.197.1.204:~/devdocs/
+              rsync -avz -e 'ssh -p 22' --delete ${GITHUB_WORKSPACE}/site/ nitesh@20.197.1.204:~/devdocs/site/
             
               
